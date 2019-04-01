@@ -1,0 +1,66 @@
+
+html {
+	font-family: "Roboto", "Arial", sans-serif;
+	height: 100%;
+}
+
+body {
+	background: rgb(131,58,180);
+	background: linear-gradient(45deg, rgb(58, 94, 180) 0%, rgb(29, 230, 253) 50%, rgb(69, 252, 186) 100%)
+}
+
+#button-grid, #operators {
+	float: left;
+}
+
+#button-grid {
+	width: 75%;
+	text-align: right;
+}
+
+#operators {
+	width: 25%;
+	text-align: center;
+}
+
+#calculator {
+	margin: 100px auto;
+	position: relative;
+	max-width: 400px;
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	box-shadow: 0 5px 25px -10px black;
+	background: #fff;
+}
+
+#output {
+	width: 90%;
+	padding: 25px 10px;
+	margin: 10px auto;
+	border: none;
+	color: #646464;
+	font-size: 2.5em;
+	font-weight: 100;
+	border-bottom: 2px solid #f6f6f6
+}
+
+.btn {
+	width: 25%;
+	padding: 10px 0;
+	margin: 5px;
+	color: #646464;
+	font-weight: 900;
+	font-size: 1.25em;
+	border: none;
+	background: transparent;
+	float: right;
+}
+
+.btn.operator {
+	width: 50%;
+	background: #f6f6f6;
+	border-radius: 100px;
+	float: left;
+}
