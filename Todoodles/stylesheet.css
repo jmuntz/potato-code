@@ -1,0 +1,124 @@
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	background: rgb(173,54,205);
+	background: linear-gradient(191deg, rgba(173,54,205,1) 0%, rgba(255,0,185,1) 49%, rgba(255,156,25,1) 100%);
+}
+
+h1 {
+	text-align: center;
+    color: #ffffff21;
+    font-size: 72px;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#todo {
+	margin: auto;
+	width: 50%;
+	max-width: 800px;
+	background: white;
+    box-shadow: 0px 4px 12px -9px black;
+    border-radius: 6px;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+#todo::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+#todo::-webkit-scrollbar-thumb {
+  background-color: #ff00b9;
+  outline: 2px solid slategrey;
+}
+
+#list {
+	width: 100%;
+	padding: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#list li:hover {
+	background: #eee;
+}
+
+#list li.item {
+	display: flex;
+	width: 100%;
+	padding: 20px 30px 10px 30px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#list li.item span {
+    font-weight: 100;
+    font-size: 24px;
+	flex-grow: 1;
+    color: #595959;
+}
+
+#list li a {
+    padding: 10px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+#list li.item i {
+	color: #cecece;
+}
+
+#list li.item a:hover i {
+	color: grey;
+	transition: all 100ms linear;
+}
+
+input {
+	padding: 10px;
+    border-radius: 0px;
+    border: none;
+    background: #f6f4f4;
+    border-bottom: 2px solid #e5e5e5;
+    width: 100%;
+    font-size: 40px;
+    color: #696969;
+    padding: 30px 45px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+::-webkit-input-placeholder {
+	color: #bbb;
+}
+::-moz-placeholder {
+	color: #bbb;
+}
+:-ms-input-placeholder {
+	color: #bbb;
+}
+:-moz-placeholder {
+	color: #eee;
+}
+
+input#add-item:focus {
+    border-bottom: 2px solid #a2c7ec;
+    outline: none;
+}
+
+.footer {
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 40px;
+    padding: 5px 15px;
+    font-weight: 900;
+    color: #0000000a;
+}
