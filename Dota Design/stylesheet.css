@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Asap|Mukta|Noto+Sans+JP|Rubik&display=swap');
+
+
+
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1800px;
+	}
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	color: #faf9e1;
+	background: #1a1a1a
+}
+
+* {
+	font-family: sans-serif;
+}
+
+.row {
+	padding: 4%;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Cinzel';
+}
+
+p {
+	font-family: 'Mukta';
+	line-height: 1.7em;
+	font-size: 1.2em;
+}
+
+p.lead {
+	font-style: italic;
+	font-size: 1.45em;
+}
+
+nav {
+	padding: 25px;
+	position: absolute;
+}
+
+ul.navbar-nav {
+	display: inline;
+}
+
+li.nav-item {
+	list-style: none;
+    display: inline;
+    padding: 10px;
+    margin-right: 25px;
+}
+li.nav-item a {
+	font-family: 'Cinzel';
+	color: #ffecc8c2;
+	text-decoration: none;
+}
+
+
+.jumbotron {
+	background: url('img/zeus.jpg');
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: inset 0px -100px 250px 100px #1a1a1a
+}
+
+
+.jumbotron .container {
+    height: 100%;
+    padding-top: 12%;
+    color: white;
+}
+
+.jumbotron .container p {
+	max-width: 500px;
+}
+
+
+nav {
+	background: transparent;
+	margin-bottom: -60px;
+}
+
+.row {
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	height: 80vh;
+}
+
+.row div {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row:nth-child(1) {
+	background: url(https://assets.rockpapershotgun.com/images/2018/11/dota-2-new-map.jpg);
+	box-shadow: inset 0px -100px 150px 75px #1a1a1a;
+}
+
+.row:nth-child(2) {
+	background: url('img/hero-1.png');
+	box-shadow: inset 0px -100px 150px 75px #1a1a1a;
+}
+
+.row:nth-child(3) {
+	background: url('https://i.ytimg.com/vi/AuuIO0pmStA/maxresdefault.jpg');
+	box-shadow: inset 0px -100px 150px 75px #1a1a1a;
+}
+
+.row.testimonials {
+	background: url('img/juggernaut-1.jpg');
+	box-shadow: inset 0px -100px 150px 75px #1a1a1a;
+}
