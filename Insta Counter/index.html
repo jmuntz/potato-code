@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <style>
+
+            body {
+              font-family: 'Inter', sans-serif;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              background: #000;
+              display: flex;
+              flex-direction: column;
+              height: 100vh;
+              padding: 0;
+              margin: 0;
+              background-image: linear-gradient(to left, rgba(255, 176, 31, 0.81), rgb(199, 27, 130)), url(https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80);
+              background-size: cover;
+            }
+
+            #avatar {
+                margin-bottom: 40px;
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+
+            .button {
+                transition: all .2s ease-in-out;
+              text-decoration: none;
+              border-radius: 5px;
+              font-family: inherit;
+              align-items: center;
+              position: relative;
+              padding: 18px 20px;
+              /* background: #4a2230; */
+              cursor: pointer;
+              display: flex;
+              color: #fff;
+            }
+
+            .button-icon {
+              margin-right: 16px;
+              height: 30px;
+              width: 30px;
+              top: 0;
+            }
+
+            .button-text {
+              flex-direction: column;
+              font-size: 16px;
+              display: flex;
+            }
+
+            .button-numbers {
+              margin-top: 4px;
+              font-size: 12px;
+              opacity: 0.6;
+            }
+
+            .button:hover { transform: translateY(-2px); }
+            .button:active { transform: translateY(0); }
+
+            /* .pulser:before {
+              animation: pulse 2s ease infinite;
+              border-radius: 5px;
+              position: absolute;
+              background: #4a2230;
+              content: "";
+              z-index: -1;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              top: 0;
+            } */
+
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { opacity: 0.2; }
+              100% { transform: scale(1.2, 1.4); opacity: 0; }
+            }
+
+            .background {
+              pointer-events: none;
+              overflow: hidden;
+              position: fixed;
+              height: 100vh;
+              opacity: 0.3;
+              border: none;
+              z-index: -1;
+              width: 100%;
+              left: 0;
+              top: 0;
+            }
+
+
+            #button-count {
+                font-size: 8em;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="avatar">
+            <span id="button-count"></span>
+            <span class="button-followers">followers</span>
+          <span class="button-text">
+            @josh.muntz
+          </span>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+
+            $(function(){
+              $.get('https://api.instagram.com/v1/users/self/?access_token=4148227571.08e89e7.197e084eefd940018c1d56b54fb4f6d8',
+                    function(data) {
+                $("#button-count").html((kFormatter(data.data.counts.followed_by)));
+                $("#avatar").attr("src", data.data.profile_picture);
+                // $("#avatar").html(data.data.profile_picture)
+
+              }
+                   )
+              function kFormatter(num) {
+                return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
+              }
+
+            });
+
+</script>
+    </body>
+</html>
