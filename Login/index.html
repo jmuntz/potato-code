@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <style media="screen">
+            html {
+                height: 100%;
+            }
+            body {
+                background: rgb(107,9,121);
+                background: linear-gradient(16deg, rgba(107,9,121,1) 8%, rgba(68,55,151,1) 49%, rgba(0,215,255,1) 100%);
+                background-image: linear-gradient(to left, rgba(251, 119, 41, 0.49), rgba(53, 17, 72, 0.75)), url(background-unsplash_quino-al.jpg);
+                background-size: cover;
+            }
+            body,
+                .signin {
+                    font-family: 'Roboto', sans-serif;
+                    color: #000;
+
+                }
+
+                .login {
+                    width: 350px;
+                    margin: auto;
+                    padding: 60px 60px;
+                    background: #fff;
+                    margin-top: 100px;
+                    border-radius: 4px;
+                    box-shadow: 0 8px 15px -10px black;
+                    <!-- background: url(https://picsum.photos/id/1004/5616/3744) no-repeat   center center #505050; -->
+                    <!-- background-size: cover; -->
+                    <!-- box-shadow: 0px 30px 60px -5px #000; -->
+                }
+
+                form {
+                    padding-top: 80px;
+                }
+
+
+
+
+                h2 {
+                    padding-left: 12px;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    padding-bottom: 5px;
+                    letter-spacing: 2px;
+                    display: inline-block;
+                }
+
+                h2::after {
+                    display: block;
+                    content: '';
+                    position: relative;
+                    height: 2px;
+                    width: 40px;
+                    background: #da4178;
+                    top: 10px;
+                }
+
+                h2 {
+                    padding-left: 0px;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: #3e3e3e;
+                    font-weight: 700;
+                    opacity: 0.4;
+                    display: inline-block;
+                    position: relative;
+                    top: -65px;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                .text {
+                    border: none;
+                    width: 90%;
+                    padding: 12px 20px;
+                    display: block;
+                    height: 15px;
+                    border-radius: 4px;
+                    background: rgba(0, 0, 0, 0.05);
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    margin-top: 15px;
+                    transition: all 0.5s ease-in-out;
+                }
+
+                .text:focus {
+                    outline: 0;
+                }
+
+                .text:focus + span {
+                    opacity: 1;
+                }
+
+                input[type="text"],
+                input[type="password"] {
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+
+
+                input {
+                    display: inline-block;
+                    padding-top: 20px;
+                    font-size: 14px;
+                }
+
+                h2,
+                span,
+                .custom-checkbox {
+                    margin-left: 20px;
+                }
+
+                .custom-checkbox {
+                    -webkit-appearance: none;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    padding: 8px;
+                    border-radius: 2px;
+                    display: inline-block;
+                    position: relative;
+                    top: -11px;
+                }
+
+                .custom-checkbox:checked {
+                    background-color: rgb(218, 65, 120);
+                }
+
+                .custom-checkbox:checked:after {
+                    content: '\2714';
+                    font-size: 10px;
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                    color: #fff;
+                }
+
+                .custom-checkbox:focus {
+                    outline: none;
+                }
+
+                label {
+                    margin-left: 5px;
+                    top: -18px;
+                    color: #6f6f6fd4;
+                    font-size: 12px;
+                    position: relative;
+                }
+
+                .signin {
+                    background-color: #da4178;
+                    color: #FFF;
+                    width: 100%;
+                    padding: 15px 25px;
+                    display: block;
+                    border-radius: 4px;
+                    margin-top: 30px;
+                    transition: all 0.4s ease-in-out;
+                    border: none;
+                    text-transform: uppercase;
+                }
+
+                .signin:hover {
+                    background: #b7265a;
+                    box-shadow: 0px 4px 25px -5px #ff79aa;
+                    cursor: pointer;
+                }
+
+                .signin:focus {
+                    outline: none;
+                }
+
+
+                a {
+                    text-align: center;
+                    display: block;
+                    top: 15px;
+                    position: relative;
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.2);
+                }
+
+                @media screen and (min-width: 1500px) {
+                    body {
+                        background-position-y: -200px;
+                    }
+                }
+        </style>
+    </head>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        <div class="login">
+          <h2 class="active"> sign in </h2>
+          <form>
+
+
+
+            <input type="text" class="text" name="username">
+
+             <span>username</span>
+
+            <br>
+
+            <br>
+
+            <input type="password" class="text" name="password">
+
+            <span>password</span>
+            <div class="clear"></div>
+
+            <input type="checkbox" id="checkbox-1-1" class="custom-checkbox" />
+            <label for="checkbox-1-1">Remember me?</label>
+
+            <button class="signin">
+              Sign In
+            </button>
+
+            <a href="#">Can't access your account?</a>
+          </form>
+
+        </div>
+    </body>
+</html>
