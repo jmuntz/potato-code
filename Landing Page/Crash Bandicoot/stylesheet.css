@@ -1,0 +1,144 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position-y: center;
+}
+
+nav {
+    position: relative;
+    height: 80px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 45px;
+    box-shadow: 0 2px 10px -10px black;
+}
+
+nav > * {
+    box-sizing: border-box;
+ margin-bottom: 10px;
+ outline: 1px dotted red;
+}
+
+.nav-brand {
+    max-width: 200px
+}
+
+.nav-brand img {
+    max-width: 100%;
+}
+
+.nav {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 15%
+}
+.nav li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.nav.social-links {
+    text-align: left;
+    padding-left: 0;
+}
+
+.nav.social-links a {
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.nav.social-links ion-icon {
+    position: relative;
+    font-size: 1.5em;
+    color: #777777;
+    padding: 10px;
+    background: #ececec;
+    border-radius: 50px;
+}
+
+
+.container {
+    padding: 25px 100px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container div {
+    flex: 1 1 80px;
+}
+
+h2 {
+    color: orange;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    color: black;
+    margin-top: 10px;
+    font-weight: 900;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.875em;
+    color: grey;
+    max-width: 350px;
+    line-height: 2em;
+}
+
+.crash {
+    position: relative;
+}
+.crash img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: .65em;
+    letter-spacing: 1pt;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f37a25;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 50px 0 50px 0;
+    box-shadow: 0 5px 20px -2px #ffd4b5;
+    -webkit-transition: all 1s; /* Safari prior 6.1 */
+    transition: all 250ms ease-in-out;
+}
+
+a.purchase.btn:hover, .nav.social-links ion-icon:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
