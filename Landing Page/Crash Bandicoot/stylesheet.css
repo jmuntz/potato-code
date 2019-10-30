@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: "CrashFont";
+    src: url("CCGeekSpeak-Regular.woff") format('woff');
+}
+
+
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
@@ -9,7 +17,8 @@ html, body {
 }
 
 body {
-    background-image: url('banner.png');
+    background-image:
+    url('banner.png');
     background-size: cover;
     background-position-y: center;
 }
@@ -45,14 +54,21 @@ nav > * {
     text-align: center;
     margin-right: 15%
 }
+
+.nav.nav-links a {
+        font-family: 'CrashFont';
+        text-transform: uppercase;
+        font-size: 1.25em;
+}
+
 .nav li {
     list-style-type: none;
     display: inline;
-    margin-right: 10px;
+    margin-right: 7%;
 }
 
 .nav a {
-    color: grey;
+    color: #444444;
     text-decoration: none;
 }
 
@@ -75,6 +91,24 @@ nav > * {
     border-radius: 50px;
 }
 
+h1 {
+    font-family: 'CrashFont';
+}
+
+h1 {
+    font-size: 3em;
+    color: #292929;
+    margin-top: 10px;
+    font-weight: 900;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+h2 {
+    color: orange;
+    font-weight: 700;
+}
+
 
 .container {
     padding: 25px 100px;
@@ -84,23 +118,15 @@ nav > * {
     flex-wrap: wrap;
 }
 
+.container {
+    flex: 1;
+}
+
 .container div {
     flex: 1 1 80px;
+    flex-basis: 100%;
 }
 
-h2 {
-    color: orange;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 3em;
-    color: black;
-    margin-top: 10px;
-    font-weight: 900;
-    margin-bottom: 0;
-    font-weight: bold;
-}
 
 p {
     margin-top: 10px;
@@ -111,13 +137,24 @@ p {
     line-height: 2em;
 }
 
+.crash img:nth-child(1) {
+    position: absolute;
+    bottom: -200px;
+    width: 450px;
+    left: 00px;
+    z-index: 999;
+
+}
+
+
+
 .crash {
     position: relative;
 }
-.crash img {
+.crash img:nth-child(2) {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    bottom: -100px;
+    left: -50px;
 }
 
 .btn {
